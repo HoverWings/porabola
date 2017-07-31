@@ -17,7 +17,7 @@ namespace ThisisGame
         void Start()
         {
             ////初始化数据列表;
-            infinityGridLayoutGroup = transform.Find("Panel_Scroll/Panel_Grid").GetComponent<InfinityGridLayoutGroup>();
+            infinityGridLayoutGroup = transform.Find("KnapsackPanel/SlotPanel").GetComponent<InfinityGridLayoutGroup>();
             infinityGridLayoutGroup.SetAmount(amount);
             infinityGridLayoutGroup.updateChildrenCallback = UpdateChildrenCallback;
         }
@@ -39,8 +39,8 @@ namespace ThisisGame
         {
             Debug.Log("UpdateChildrenCallback: index=" + index + " name:" + trans.name);
 
-            Text text = trans.Find("Text").GetComponent<Text>();
-            text.text = index.ToString();
+            //Text text = trans.Find("Text").GetComponent<Text>();
+            //text.text = index.ToString();
         }
 
         // Update is called once per frame
